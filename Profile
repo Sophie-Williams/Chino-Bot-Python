@@ -1,1 +1,1 @@
-worker: Chino.py
+worker: python bot.py
