@@ -4,6 +4,8 @@ from discord.ext import commands
 import asyncio
 import time
 import random
+import requests
+import os
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "ck!")
@@ -40,4 +42,4 @@ async def on_message(message):
 	elif message.content.startswith("ck!ask"):
 		await client.send_message(message.channel, random.choice(["Uh.. I t-think that would be a yes.", "I-I agree with that..", "Oh.. M-My answer would be a maybe. I-I'm not too sure..", "I-I approve with it..", "Y-Yes..", "I d-don't approve of it..", "No.. T-That's a no.", "N-No..", "I-I don't think so..", "My answer is a no.."]))
 		
-client.run("NTI5ODY5MTEyNDYyMTQ3NjE1.XLt5aA.LZMQf1-h03_HGesuPJ0ob0raBV4")
+client.run(str(os.environ.get('BOT_TOKEN')))
